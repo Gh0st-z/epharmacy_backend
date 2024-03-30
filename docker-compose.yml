@@ -1,0 +1,50 @@
+version: '3.9'
+services:
+  onlinemedshub:
+    env_file: "venv/dbase.env"
+    image: onlinemedshub
+    build:
+      context: .
+    entrypoint: ./execute.sh
+    ports:
+      - "8000:8000"
+    networks:
+      - elibrary-net
+    depends_on:
+      - pharma_db
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 1024M
+        reservations:
+          memory: 20M
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
+
+  pharma_db:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "Ashim#990"
+      ACCEPT_EULA: "Y"
+      DB_NAME: "pharmacy_app"
+    ports:
+      - "1401:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+    networks:
+      - elibrary-net
+
+networks:
+  elibrary-net:
+    external: true
+    name: elibrary-network
+    ipam:
+      driver: default
+      config:
+        - subnet: "152.22.238.0/24"
+        - subnet: "2001:3984:3989::/64"
+
+volumes:
+  sqlvolume:
