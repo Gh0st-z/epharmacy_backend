@@ -21,7 +21,7 @@ class Pharmacy(models.Model):
         db_table = 'pharmacy'
 
     def __str__(self):
-        return str(self.id)
+        return str(self.pharmacy_id)
 
     @classmethod
     @transaction.atomic

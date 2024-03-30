@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class PharmacyManager(BaseUserManager):
     def _create_pharmacy(self, pharmacy_name, address, license_number, phone_number, pharmacy_type, pharmacy_logo, website_url, admin_id):
-        pharmacy_name = self.normalize_email(pharmacy_name)
         pharmacy = self.model(
+            pharmacy_name = pharmacy_name,
             address=address,
             license_number=license_number,
             phone_number=phone_number,
@@ -18,14 +18,5 @@ class PharmacyManager(BaseUserManager):
         pharmacy.save(using=self._db)
         return pharmacy
 
-    def create_pharmacy(self, pharmacy_name, address, license_number, phone_number, pharmacy_type, pharmacy_logo, website_url, admin_id):
-        return self._create_pharmacy(
-            pharmacy_name=pharmacy_name,
-            address=address,
-            license_number=license_number,
-            phone_number=phone_number,
-            pharmacy_type=pharmacy_type,
-            pharmacy_logo=pharmacy_logo,
-            website_url=website_url,
-            admin_id=admin_id
-        )
+    def create_pharmacy(self, **kwargs):
+        return self._create_pharmacy(**kwargs)

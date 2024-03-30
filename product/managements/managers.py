@@ -5,8 +5,8 @@ from django.utils import timezone
 
 class ProductManager(BaseUserManager):
     def _create_product(self, product_name, product_info, price, quantity, product_type, product_image, pharmacy):
-        product_name = self.normalize_email(product_name)
         product = self.model(
+            product_name=product_name,
             product_info=product_info,
             price=price,
             quantity=quantity,

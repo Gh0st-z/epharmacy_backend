@@ -24,7 +24,7 @@ class CreatePharmacyProfileAPI(APIView):
 
         if pharmacy_logo:
             data['pharmacy_logo'] = pharmacy_logo
-            
+
         serializer = PharmacySerializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.save()

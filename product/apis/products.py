@@ -18,7 +18,7 @@ class AddProductAPI(APIView):
             'quantity': request.data.get('quantity'),
         }
 
-        pharmacy_id = request.data.get('pharmacy_id')
+        pharmacy_id = request.data.get('pharmacy')
         data['pharmacy'] = pharmacy_id
         product_image = request.FILES.get('product_image')
 
@@ -29,3 +29,25 @@ class AddProductAPI(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class GetProductAPI(APIView):
+    def get(self, request, *args, **kwargs):
+        pharmacy_id = request.GET.get('pharmacy', None)
+        products = Product.objects.filter(pharmacy=pharmacy_id, product_type='product')
+
+        if products.exists():
+            serializer = ProductSerializer(products, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+
+class GetMedicineAPI(APIView):
+    def get(self, request, *args, **kwargs):
+        pharmacy_id = request.GET.get('pharmacy', None)
+        medicines = Product.objects.filter(pharmacy=pharmacy_id, product_type='medicine')
+
+        if medicines.exists():
+            serializer = ProductSerializer(medicines, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
