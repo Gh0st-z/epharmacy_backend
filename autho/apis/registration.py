@@ -18,6 +18,7 @@ class CheckRegsiteredEmailAPI(APIView):
         else:
             return JsonResponse({'exists': False})
 
+
 class RegisterUserAPI(APIView):
     def post(self, request, *args, **kwargs):
         data = {
@@ -35,3 +36,30 @@ class RegisterUserAPI(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response({'message': 'Invalid data provided!'}, status=status.HTTP_401_UNAUTHORIZED)
+
+
+class UpdateUserAPI(APIView):
+    def put(self, request, *args, **kwargs):
+        user_id = request.data.get('user_id')
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist:
+            return Response({'message': 'User does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        data = {
+            'first_name': request.data.get('first_name', user.first_name),
+            'middle_name': request.data.get('middle_name', user.middle_name),
+            'last_name': request.data.get('last_name', user.last_name),
+            'email': request.data.get('email', user.email),
+            'phone_number': request.data.get('phone_number', user.phone_number),
+            'address': request.data.get('address', user.address),
+            'password': request.data.get('password', user.password),
+            'role': request.data.get('role', user.role),
+        }
+
+        serializer = UserSerializer(user, data=data)
+        if serializer.is_valid():
+            serialzer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

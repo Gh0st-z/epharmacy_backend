@@ -30,6 +30,7 @@ class AddProductAPI(APIView):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+
 class GetProductAPI(APIView):
     def get(self, request, *args, **kwargs):
         pharmacy_id = request.GET.get('pharmacy', None)
@@ -41,6 +42,7 @@ class GetProductAPI(APIView):
         else:
             return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
 
+
 class GetMedicineAPI(APIView):
     def get(self, request, *args, **kwargs):
         pharmacy_id = request.GET.get('pharmacy', None)
@@ -51,3 +53,8 @@ class GetMedicineAPI(APIView):
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+
+
+class UpdateProductAPI(APIView):
+    def put(self, request, *args, **kwargs):
+        

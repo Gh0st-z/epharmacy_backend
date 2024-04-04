@@ -3,6 +3,18 @@
 /lib64
 /include
 
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+dev.env
+prod.env
+influx-prod.env
+sprod.env
+
+virtualenvs/
 backend/localsettings.py
 **.pyc
 **.cfg

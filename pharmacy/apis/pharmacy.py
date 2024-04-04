@@ -30,6 +30,7 @@ class CreatePharmacyProfileAPI(APIView):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+
 class GetPharmacyProfileAPI(APIView):
     def get(self, request, *args, **kwargs):
         pharmacy_name = request.GET.get('pharmacy_name', None)
