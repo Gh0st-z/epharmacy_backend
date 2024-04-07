@@ -15,8 +15,8 @@ class CreateCartItemsAPI(APIView):
             'price': request.data.get('price'),
             'total_price': request.data.get('total_price'),
         }
-        customer = request.data.get('customer_id')
-        product = request.data.get('product_id')
+        customer = request.GET.get('customer_id')
+        product = request.GET.get('product_id')
         data['customer'] = customer
         data['product'] = product
         prescription = request.FILES.get('prescription')

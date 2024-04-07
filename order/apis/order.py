@@ -17,8 +17,8 @@ class CreateOrderItemsAPI(APIView):
             'billing_address': request.data.get('billing_address'),
             'status': request.data.get('status')
         }
-        customer = request.data.get('customer_id')
-        cart = request.data.get('cart_id')
+        customer = request.GET.get('customer_id')
+        cart = request.GET.get('cart_id')
         data['customer'] = customer
         data['cart'] = cart
 

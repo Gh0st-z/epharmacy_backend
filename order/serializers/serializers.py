@@ -11,7 +11,7 @@ class CartSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         cart = Cart.create_cart(validated_data)
-        return user
+        return cart
 
     def update(self, instance, validated_data):
         instance.update(**validated_data)

@@ -39,8 +39,8 @@ class RegisterUserAPI(APIView):
 
 
 class UpdateUserAPI(APIView):
-    def put(self, request, *args, **kwargs):
-        user_id = request.data.get('user_id')
+    def put(self, request, id, *args, **kwargs):
+        user_id = id
         try:
             user = User.objects.get(id=user_id)
         except User.DoesNotExist:
@@ -59,7 +59,7 @@ class UpdateUserAPI(APIView):
 
         serializer = UserSerializer(user, data=data)
         if serializer.is_valid():
-            serialzer.save()
+            serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -30,3 +30,10 @@ class UserManager(BaseUserManager):
             password=password,
             role=role,
         )
+
+    def update_user(self, user_id, **validated_data):
+        user = User.objects.get(id=user_id)
+        for field, value in validated_data.items():
+            setattr(user, field, value)
+        user.save()
+        return user

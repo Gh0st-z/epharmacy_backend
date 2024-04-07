@@ -19,6 +19,17 @@ class GetStaffDetailsAPI(APIView):
         else:
             return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
 
+
+class GetUserUpdateDetailAPI(APIView):
+    def get(self, request, id, *args, **kwargs):
+        user = User.objects.filter(id=id)
+        if user.exists():
+            serializer = UserSerializer(user, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+
+
 class LoginUserAPI(APIView):
     def post(self, request, *args, **kwargs):
         data = {

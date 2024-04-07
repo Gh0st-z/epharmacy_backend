@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'pharmacy.apps.PharmacyConfig',
     'product.apps.ProductConfig',
     'order.apps.OrderConfig',
+    'invoice.apps.InvoiceConfig',
+    'features.apps.FeaturesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

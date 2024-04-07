@@ -7,4 +7,6 @@ urlpatterns = [
     path('register/', RegisterUserAPI.as_view(), name='register'),
     path('login/', LoginUserAPI.as_view(), name='login'),
     path('get-staff/', GetStaffDetailsAPI.as_view(), name='get-staff'),
+    path('get-user/<uuid:id>/', GetUserUpdateDetailAPI.as_view(), name='get-user'),
+    path('update-user/<uuid:id>/', UpdateUserAPI.as_view(), name='update-user'),
 ]
