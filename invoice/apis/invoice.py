@@ -1,21 +1,26 @@
-from autho.models import *
-from order.models import *
-from django.contrib.auth.models import BaseUserManager
-from django.contrib.auth import get_user_model
-from django.utils import timezone
+from django.shortcuts import render
+from django.http import JsonResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from rest_framework.decorators import api_view
+from order.models import Order
+from autho.models import User
+from invoice.serializers.serializers import InvoiceSerializer
 
-class Invoice(BaseUserManager):
-    def _generate_invoice(self, customer_name, quantity, total_price, billing_address, customer, order):
-        invoice = self.model(
-            customer_name=customer_name,
-            quantity = quantity,
-            total_price=total_price,
-            billing_address=billing_address,
-            customer=customer,
-            order=order,
-        )
-        invoice.save(using=self._db)
-        return invoice
+class GenerateInvoiceAPI(APIView):
+    def post(self, request, *args, **kwargs):
+        data = {
+            'quantity': request.data.get('quantity'),
+            'total_price': request.data.get('total_price'),
+            'billing_address': request.data.get('billing_address'),
+        }
+        customer = request.GET.get('customer_id')
+        order = request.GET.get('order_id')
+        data['customer'] = customer
+        data['product'] = product
 
-    def generate_invoice(self, **kwargs):
-        return self._generate_invoice(**kwargs)
+        serializer = InvoiceSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
