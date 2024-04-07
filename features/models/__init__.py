@@ -3,5 +3,4 @@ from features.models.features import(
     SetReminder,
     FamilyProfile,
     DietConsultation,
-    
 )
