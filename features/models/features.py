@@ -1,5 +1,7 @@
 import uuid
-from django.db import models
+from autho.models import User
+from django.db import models, transaction
+from features.managements.managers import BMIManager, ReminderManager, ProfileManager, DietManager
 
 class BMI(models.Model):
     bmi_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

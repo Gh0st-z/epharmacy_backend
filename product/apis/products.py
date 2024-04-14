@@ -4,6 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from uuid import UUID
 from pharmacy.models import Pharmacy
 from product.models import Product
 from product.serializers.serializers import ProductSerializer
@@ -78,42 +79,73 @@ class GetMedicineUpdateDetailAPI(APIView):
 
 
 class UpdateProductAPI(APIView):
-    def put(self, request, *args, **kwargs):
-        product_id = request.GET.get('product_id', None)
-        product = Product.objects.filter(product_id=product_id)
+    def put(self, request, id, *args, **kwargs):
+        product_id = id
+
+        try:
+            product = Product.objects.get(product_id=product_id)
+        except Product.DoesNotExist:
+            return Response({'message': 'Product does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         data = {
             'product_name': request.data.get('product_name', product.product_name),
             'product_info': request.data.get('product_info', product.product_info),
             'price': request.data.get('price', product.price),
-            'product_type': request.data.get('product_type', product.product_type),
+            'product_type': 'product',
             'quantity': request.data.get('quantity', product.quantity),
         }
 
-        serialzer = ProductSerializer(product, data=data)
-        if serialzer.is_valid():
+        product_image = request.FILES.get('product_image')
+
+        if product_image:
+            data['product_image'] = product_image
+
+        serializer = ProductSerializer(product, data=data)
+        if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-        return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class UpdateMedicineAPI(APIView):
-    def put(self, request, *args, **kwargs):
-        medicine_id = request.GET.get('product_id', None)
-        medicine = Product.objects.filter(product_id=product_id)
+    def put(self, request, id, *args, **kwargs):
+        product_id = id
+
+        try:
+            medicine = Product.objects.get(product_id=product_id)
+        except Product.DoesNotExist:
+            return Response({'message': 'Product does not exist'}, status=status.HTTP_404_NOT_FOUND)
 
         data = {
-            'product_name': request.data.get('product_name', product.product_name),
-            'product_info': request.data.get('product_info', product.product_info),
-            'price': request.data.get('price', product.price),
-            'product_type': request.data.get('product_type', product.product_type),
-            'quantity': request.data.get('quantity', product.quantity),
+            'product_name': request.data.get('product_name', medicine.product_name),
+            'product_info': request.data.get('product_info', medicine.product_info),
+            'price': request.data.get('price', medicine.price),
+            'product_type': 'medicine',
+            'quantity': request.data.get('quantity', medicine.quantity),
         }
 
-        serialzer = ProductSerializer(medicine, data=data)
-        if serialzer.is_valid():
+        product_image = request.FILES.get('product_image')
+
+        if product_image:
+            data['product_image'] = product_image
+
+        serializer = ProductSerializer(medicine, data=data)
+        if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
 
-        return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class DeleteProductAPI(APIView):
+    def delete(self, request, id, *args, **kwargs):
+        product_id = id
+
+        try:
+            product = Product.objects.get(product_id=id)
+        except Product.DoesNotExist:
+            return Response({'message': 'Product does not exist'}, status=status.HTTP_404_NOT_FOUND)
+
+        product.delete()
+        return Response({'message': 'Product has been deleted'}, status=status.HTTP_200_OK)

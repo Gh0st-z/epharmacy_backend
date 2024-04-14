@@ -4,7 +4,7 @@ DATABASES = {
         'NAME': 'Pharmacy_App',
         'USER': '',
         'PASSWORD': '',
-        'HOST': 'INFINITZ',
+        'HOST': 'DESKTOP-9T7H1OB',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
         },

@@ -9,4 +9,5 @@ urlpatterns = [
     path('updget-medicine/<uuid:id>/', GetMedicineUpdateDetailAPI.as_view(), name='updget-medicine'),
     path('update-product/<uuid:id>/', UpdateProductAPI.as_view(), name='update-product'),
     path('update-medicine/<uuid:id>/', UpdateMedicineAPI.as_view(), name='update-medicine'),
+    path('delete-product/<uuid:id>/', DeleteProductAPI.as_view(), name='delete-medicine'),
 ]
