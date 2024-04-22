@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
-from order.models import Cart
+from order.models import Order
 from autho.models import User
 from order.serializers.serializers import OrderSerializer
 
@@ -26,3 +26,13 @@ class CreateOrderItemsAPI(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+class GetAllOrderItemsAPI(APIView):
+    def get(self, request, *args, **kwargs):
+        order = Order.objects.all()
+        if order.exists():
+            serializer = OrderSerializer(order, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)

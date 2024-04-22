@@ -100,7 +100,7 @@ class UpdateProductAPI(APIView):
         if product_image:
             data['product_image'] = product_image
 
-        serializer = ProductSerializer(product, data=data)
+        serializer = ProductSerializer(instance=product, data=data, partial=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)

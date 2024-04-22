@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Cart{% endblock %}
+{% block title %}Wishlist{% endblock %}
 {% block content %}
 <header>
   <div class="header-top-area pl-165 pr-165">
@@ -9,7 +9,7 @@
               <div class="col-xl-8 col-lg-6 col-md-6">
                   <div class="header-top-wrapper">
                       <div class="header-top-info d-none d-xl-block f-left">
-                          <span><i class="fas fa-heart"></i> Welcome to OnlineMedsHub. We provides medical accessories</span>
+                          <span><i class="fas fa-heart"></i> Welcome to Medibazae. We provides medical accessories</span>
                       </div>
                   </div>
               </div>
@@ -31,9 +31,9 @@
       <div class="container-fluid">
           <div class="row align-items-center">
               <div class="col-xl-3 col-lg-3">
-                <div class="logo">
-                    <a href="../home/"><img class="logo-image " src="{% static 'img/logo/company_logo.png' %}" alt="" /></a>
-                </div>
+                  <div class="logo">
+                      <a href="index-2.html"><img src="{% static 'img/logo/logo.png' %}" alt="" /></a>
+                  </div>
               </div>
               <div class="col-xl-9 col-lg-9 d-none d-lg-block">
                   <div class="header-right f-right">
@@ -62,16 +62,16 @@
                   <div class="main-menu">
                     <nav id="mobile-menu">
                         <ul>
-                            <li class="active"><a href="../">Home</a>
+                            <li class="active"><a href="../home/">Home</a>
                             </li>
-                            <li><a href="../products/">Shop</a>
+                            <li><a href="products/">Shop</a>
                             </li>
-                            <li><a href="shop-grid.html">BMI</a></li>
-                            <li><a href="blog-grid.html">Family Profile</a>
+                            <li><a href="bmi/">BMI</a></li>
+                            <li><a href="family-profile/">Family Profile</a>
                             </li>
-                            <li><a href="#">Set Reminder</a>
+                            <li><a href="reminder/">Set Reminder</a>
                             </li>
-                            <li><a href="contact.html">Diet Plans</a></li>
+                            <li><a href="diet-plans/">Diet Plans</a></li>
                         </ul>
                     </nav>
                   </div>
@@ -106,8 +106,8 @@
           </div>
           <div class="contact-list mb-30">
               <h4>Email Address</h4>
-              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c8a1a6aea788adb0a9a5b8a4ade6aba7a5">[email&#160;protected]</a></p>
-              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f6938e979b869a93d89b979f9ab69e839bd895999b">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b5dcdbd3daf5d0cdd4d8c5d9d09bd6dad8">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9df8e5fcf0edf1f8b3f0fcf4f1ddf5e8f0b3fef2f0">[email&#160;protected]</a></p>
           </div>
       </div>
       <div class="instagram">
@@ -153,11 +153,11 @@
               <div class="col-xl-12">
                   <div class="breadcrumb-wrapper">
                       <div class="breadcrumb-text">
-                          <h2>cart</h2>
+                          <h2>Wishlist</h2>
                       </div>
                       <ul class="breadcrumb-menu">
                           <li><a href="index-2.html">home</a></li>
-                          <li><span>cart</span></li>
+                          <li><span>Wishlist</span></li>
                       </ul>
                   </div>
               </div>
@@ -188,7 +188,7 @@
                                     <td class="product-name"><a href="#">Bakix Furniture</a></td>
                                     <td class="product-price"><span class="amount">$130.00</span></td>
                                     <td class="product-quantity">
-                                        <div class="cart-plus-minus"><input type="text" value="1" /></div>
+                                        <button class="c-btn theme-btn-2" type="submit">Add TO Cart</button>
                                     </td>
                                     <td class="product-subtotal"><span class="amount">$130.00</span></td>
                                     <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
@@ -199,40 +199,13 @@
                                     <td class="product-name"><a href="#">Sujon Chair Set</a></td>
                                     <td class="product-price"><span class="amount">$120.50</span></td>
                                     <td class="product-quantity">
-                                        <div class="cart-plus-minus"><input type="text" value="1" /></div>
+                                        <button class="c-btn theme-btn-2" type="submit">Add TO Cart</button>
                                     </td>
                                     <td class="product-subtotal"><span class="amount">$120.50</span></td>
                                     <td class="product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="coupon-all">
-                                <div class="coupon">
-                                    <input id="coupon_code" class="input-text" name="coupon_code" value=""
-                                        placeholder="Coupon code" type="text">
-                                    <button class="c-btn theme-btn-2" name="apply_coupon" type="submit">Apply
-                                        coupon</button>
-                                </div>
-                                <div class="coupon2">
-                                    <input class="c-btn theme-btn" name="update_cart" value="Update cart" type="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5 ml-auto">
-                            <div class="cart-page-total">
-                                <h2>Cart totals</h2>
-                                <ul class="mb-20">
-                                    <li>Subtotal <span>$250.00</span></li>
-                                    <li>Total <span>$250.00</span></li>
-                                </ul>
-                                <a class="c-btn theme-btn" href="#">Proceed to checkout</a>
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>

@@ -3,96 +3,43 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <header>
-  <div class="header-top theme-bg">
-      <div class="container">
+  <div class="header-top-area pl-165 pr-165">
+      <div class="container-fluid">
           <div class="row">
-              <div class="col-xl-4 col-lg-4 col-md-5">
+              <div class="col-xl-8 col-lg-6 col-md-6">
                   <div class="header-top-wrapper">
-                      <div class="header-02-link f-left">
-                          <a href="#">-40% OFF</a>
-                          <span>All new products</span>
+                      <div class="header-top-info d-none d-xl-block f-left">
+                          <span><i class="fas fa-heart"></i> Welcome to OnlineMedsHub. We provides medical accessories</span>
                       </div>
                   </div>
               </div>
-              <div class="col-xl-8 col-lg-8 col-md-7">
-                  <div class="header-top-wrapper text-md-right">
-                      <div class="header-info">
-                          <span><i class="far fa-phone"></i> Call Us +123 (456) 7879</span>
-                          <span class="mail2-header-icon"><i class="far fa-envelope-open"></i> <a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f98a8c8989968b8db99e94989095d79a9694">[email&#160;protected]</a></span>
-                          <span class="mail1-header-icon"><i class="far fa-map-marked"></i> 205 Main Street, USA</span>
-                      </div>
+              <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="header-top-right text-md-right">
+                     <div class="shop-menu">
+                         <ul>
+                             <li><a href="user-profile/"><i class="fal fa-user-circle"></i> My Account</a></li>
+                             <li><a href="cart/"><i class="far fa-cart-plus"></i> Cart</a></li>
+                             <li><a href="wishlist/"><i class="far fa-heart"></i> Wishlist</a></li>
+                         </ul>
+                     </div>
                   </div>
               </div>
           </div>
       </div>
   </div>
-  <div id="sticky-header" class="main-menu-area menu-03 pl-55 pr-55">
+  <div id="sticky-header" class="main-menu-area menu-01 pl-165 pr-165">
       <div class="container-fluid">
           <div class="row align-items-center">
               <div class="col-xl-3 col-lg-3">
-                  <div class="logo">
-                      <a href="index-2.html"><img src="{% static 'img/logo/logo.png' %}" alt="" /></a>
-                  </div>
+                <div class="logo">
+                    <a href="../home/"><img class="logo-image " src="{% static 'img/logo/company_logo.png' %}" alt="" /></a>
+                </div>
               </div>
-              <div class="col-xl-6 col-lg-6">
-                  <div class="header-search f-right">
-                      <form class="header-search-form">
-                          <input placeholder="Search" type="text"/>
-                          <button type="submit"><i class="far fa-search"></i></button>
-                      </form>
-                  </div>
-                  <div class="main-menu">
-                      <nav id="mobile-menu">
-                          <ul>
-                              <li class="active"><a href="index-2.html">home</a>
-                                  <ul class="sub-menu text-left">
-                                      <li><a href="index-2.html">home 1</a></li>
-                                      <li><a href="index-3.html">home 2</a></li>
-                                      <li><a href="index-4.html">home 3</a></li>
-                                  </ul>
-                              </li>
-                              <li><a href="shop-grid.html">Shop</a>
-                                  <ul class="sub-menu text-left">
-                                      <li><a href="shop-grid.html">shop grid</a>
-                                      <li><a href="shop-full-width.html">shop full width</a>
-                                      <li><a href="shop-04-column.html">shop 04 column</a>
-                                      <li><a href="shop-left-02-column.html">shop left 02 column</a>
-                                      <li><a href="shop-left-sidebar.html">shop left sidebar</a>
-                                      <li><a href="shop-right-sidebar.html">shop right sidebar</a>
-                                      <li><a href="product-details.html">product details</a>
-                                      <li><a href="wishlist.html">wishlist</a>
-                                      <li><a href="checkout.html">checkout</a>
-                                      <li><a href="cart.html">cart</a>
-                                      <li><a href="login.html">login</a>
-                                      <li><a href="register.html">register</a>
-
-                                  </ul>
-                              </li>
-                              <li><a href="shop-grid.html">Categories </a></li>
-                              <li><a href="blog-grid.html">Blog</a>
-                                  <ul class="sub-menu text-left">
-                                      <li><a href="blog-grid.html">blog grid</a></li>
-                                      <li><a href="blog-grid-sidebar.html">blog grid sidebar</a></li>
-                                      <li><a href="blog-standard.html">blog standardr</a></li>
-                                      <li><a href="blog-details.html">blog details</a></li>
-                                  </ul>
-                              </li>
-                              <li><a href="#">pages</a>
-                                  <ul class="sub-menu text-left">
-                                      <li><a href="about.html">about</a></li>
-                                      <li><a href="contact.html">contact</a></li>
-                                  </ul>
-                              </li>
-                              <li><a href="contact.html">contact</a></li>
-                          </ul>
-                      </nav>
-                  </div>
-              </div>
-              <div class="col-xl-3 col-lg-3">
+              <div class="col-xl-9 col-lg-9 d-none d-lg-block">
                   <div class="header-right f-right">
-                      <div class="header-lang f-right pos-rel">
+                      <div class="header-lang f-right pos-rel d-none d-md-none d-lg-block">
                           <div class="lang-icon">
-                              <img src="{% static 'img/icon/flag.png ' %}" alt="">
+                              <img src="{% static 'img/icon/flag.png' %}" alt="">
                               <a href="#"><i class="far fa-angle-down"></i></a>
                           </div>
                           <ul class="header-lang-list">
@@ -105,13 +52,28 @@
                       <div class="menu-bar info-bar f-right d-none d-md-none d-lg-block">
                           <a href="#"><i class="fal fa-bars"></i></a>
                       </div>
-                      <div class="cart-icon f-right d-none d-lg-block">
-                          <a href="#"><i class="far fa-user-circle"></i></a>
-                          <a href="cart.html"><i class="far fa-cart-plus"></i>
-                              <span class="cart-1">1</span>
-                          </a>
-                          <a href="#"><i class="far fa-heart"></i></a>
+                      <div class="header-search f-right d-none d-xl-block">
+                          <form class="header-search-form">
+                              <input placeholder="Search" type="text">
+                              <button type="submit"><i class="far fa-search"></i></button>
+                          </form>
                       </div>
+                  </div>
+                  <div class="main-menu">
+                    <nav id="mobile-menu">
+                        <ul>
+                            <li class="active"><a href="../home/">Home</a>
+                            </li>
+                            <li><a href="products/">Shop</a>
+                            </li>
+                            <li><a href="bmi/">BMI</a></li>
+                            <li><a href="family-profile/">Family Profile</a>
+                            </li>
+                            <li><a href="reminder/">Set Reminder</a>
+                            </li>
+                            <li><a href="diet-plans/">Diet Plans</a></li>
+                        </ul>
+                    </nav>
                   </div>
               </div>
               <div class="col-12">
@@ -128,7 +90,7 @@
       </div>
       <div class="logo-side mb-30">
           <a href="index-2.html">
-              <img src="{% static 'img/logo/white-logo.png' %}" alt="" />
+              <img src="{% static 'img/logo/white-logo.png" alt="" />
           </a>
       </div>
       <div class="side-info mb-30">
@@ -144,8 +106,8 @@
           </div>
           <div class="contact-list mb-30">
               <h4>Email Address</h4>
-              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e48d8a828ba4819c8589948881ca878b89">[email&#160;protected]</a></p>
-              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="67021f060a170b02490a060e0b270f120a4904080a">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0a9aea6af80a5b8a1adb0aca5eea3afad">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acc9d4cdc1dcc0c982c1cdc5c0ecc4d9c182cfc3c1">[email&#160;protected]</a></p>
           </div>
       </div>
       <div class="instagram">
@@ -184,1623 +146,890 @@
       </div>
   </div>
 </header>
-
 <main>
-    <section class="hero-area">
-        <div class="hero-slider">
-            <div class="slider-active">
-                <div class="single-slider slider-2-height d-flex align-items-center"
-                    data-background="{% static 'img/slider/02.jpg' %}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-7 col-md-9">
-                                <div class="hero-content">
-                                    <div class="slider-caption ">
-                                        <span data-animation="fadeInUp" data-delay=".2s">New Formula</span>
-                                        <h2 data-animation="fadeInUp" data-delay=".4s">Lab Hand
-                                        Sanitizer</h2>
-                                        <p data-animation="fadeInUp" data-delay=".6s">Sed ut perspiciatis unde omnis iste natus error oluptatem accusantium doloremque laudantium totam rem</p>
-                                    </div>
-                                    <div class="hero-02-slider-btn">
-                                        <a data-animation="fadeInUp" data-delay=".8s" href="contact.html" class="c-btn">buy now <i class="far fa-plus"></i></a>
-                                        <a data-animation="fadeInUp" data-delay=".8s" href="contact.html" class="c-btn red-btn">shop
-                                            now <i class="far fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-5">
-                                <div class="slider-02-img" data-animation="fadeInRight" data-delay=".8s">
-                                    <img src="{% static 'img/slider/02.png' %}" alt="">
-                                    <div class="slide-price">
-                                        <h3>$89<span>.99</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slider slider-2-height d-flex align-items-center"
-                    data-background="{% static 'img/slider/02.jpg' %}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="hero-content">
-                                    <div class="slider-caption ">
-                                        <span data-animation="fadeInUp" data-delay=".2s">New Formula</span>
-                                        <h2 data-animation="fadeInUp" data-delay=".4s">Lab Hand
-                                        Sanitizer</h2>
-                                        <p data-animation="fadeInUp" data-delay=".6s">Sed ut perspiciatis unde omnis iste natus error oluptatem accusantium doloremque laudantium totam rem</p>
-                                    </div>
-                                    <div class="hero-02-slider-btn">
-                                        <a data-animation="fadeInUp" data-delay=".8s" href="contact.html" class="c-btn">buy now <i class="far fa-plus"></i></a>
-                                        <a data-animation="fadeInUp" data-delay=".8s" href="contact.html" class="c-btn red-btn">shop
-                                            now <i class="far fa-plus"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6">
-                                <div class="slider-02-img" data-animation="fadeInRight" data-delay=".8s">
-                                    <img src="{% static 'img/slider/02.png' %}" alt="">
-                                    <div class="slide-price">
-                                        <h3>$89<span>.99</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- hero-area end -->
-
-    <!-- product-feature-area-start -->
-    <div class="product-feature-area pt-100 pb-50">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                    <div class="section-title text-center mb-65">
-                        <h2>Features Products</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="product-feature-wrapper text-center mb-30">
-                        <div class="p-feature-icon">
-                            <img src="{% static 'img/icon/01.png' %}" alt="">
-                        </div>
-                        <div class="p-feature-text">
-                            <h3>75% Ethyl Alcohol</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natsit voluptatem explicabo</p>
-                            <a href="product-details.html"><i class="fal fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="product-feature-wrapper text-center mb-30">
-                        <div class="p-feature-icon">
-                            <img src="{% static 'img/icon/02.png' %}" alt="">
-                        </div>
-                        <div class="p-feature-text">
-                            <h3>Water-Free</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natsit voluptatem explicabo</p>
-                            <a href="product-details.html"><i class="fal fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="product-feature-wrapper text-center mb-30">
-                        <div class="p-feature-icon">
-                            <img src="{% static 'img/icon/03.png' %}" alt="">
-                        </div>
-                        <div class="p-feature-text">
-                            <h3>Antibacterial Clean</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natsit voluptatem explicabo</p>
-                            <a href="product-details.html"><i class="fal fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="product-feature-wrapper text-center mb-30">
-                        <div class="p-feature-icon">
-                            <img src="{% static 'img/icon/04.png' %}" alt="">
-                        </div>
-                        <div class="p-feature-text">
-                            <h3>Non-Stick Hands</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natsit voluptatem explicabo</p>
-                            <a href="product-details.html"><i class="fal fa-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- product-feature-area-end -->
-
-    <!-- used-list-area-start -->
-    <div class="used-list-area pb-65">
-        <div class="container">
-            <div class="used-list-bg pt-100">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                        <div class="section-title text-center mb-65">
-                            <h2>How Can Use Sanitizer</h2>
-                            <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-7 col-lg-7 mb-30">
-                        <div class="used-list-img">
-                            <img src="{% static 'img/bg/02.png' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="used-list-wrapper mb-30">
-                            <div class="used-list-item">
-                                <ul>
-                                    <li>
-                                        <div class="used-list-icon f-left">
-                                            <img src="{% static 'img/icon/u-01.png' %}" alt="">
-                                        </div>
-                                        <div class="used-list-text">
-                                            <h4>Apply Alcohol Spray</h4>
-                                            <p>Sed perspiciatis unde omnis iste natuerror
-                                            sit voluptatem accusantiu oloremque laudan
-                                            tium totam rem aperiam wayse</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="used-list-icon f-left">
-                                            <img src="{% static 'img/icon/u-02.png' %}" alt="">
-                                        </div>
-                                        <div class="used-list-text">
-                                            <h4>Rub Hands Together</h4>
-                                            <p>Sed perspiciatis unde omnis iste natuerror
-                                            sit voluptatem accusantiu oloremque laudan
-                                            tium totam rem aperiam wayse</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="used-list-icon f-left">
-                                            <img src="{% static 'img/icon/u-03.png' %}" alt="">
-                                        </div>
-                                        <div class="used-list-text">
-                                            <h4>Surface Unity Dry</h4>
-                                            <p>Sed perspiciatis unde omnis iste natuerror
-                                            sit voluptatem accusantiu oloremque laudan
-                                            tium totam rem aperiam wayse</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- used-list-area-end -->
-
-    <!-- banner-area-start -->
-    <div class="banner-area banner-pb pb-70 pl-55 pr-55">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="banner-wrapper text-center mb-30">
-                        <div class="banner-img pos-rel">
-                            <a href="#"><img src="{% static 'img/banner/b-04.jpg' %}" alt=""></a>
-                            <div class="b-02-tag">
-                                <h3>20% <br> <span>off</span> </h3>
-                            </div>
-                            <div class="banner-text banner-1-text">
-                                <span>Covid 19</span>
-                                <h2>Lab Face Mask</h2>
-                                <div class="b-button red-b-button">
-                                    <a href="contact.html">shop now <i class="far fa-plus"></i></a>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="banner-wrapper text-center mb-30">
-                        <div class="banner-img pos-rel">
-                            <a href="#"><img src="{% static 'img/banner/b-05.jpg' %}" alt=""></a>
-                            <div class="b-02-tag">
-                                <h3>10% <br> <span>off</span> </h3>
-                            </div>
-                            <div class="banner-text banner-1-text">
-                                <span>Covid 19</span>
-                                <h2>Hand Mask</h2>
-                                <div class="b-button red-b-button">
-                                    <a href="contact.html">shop now <i class="far fa-plus"></i></a>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="banner-wrapper text-center mb-30">
-                        <div class="banner-img pos-rel">
-                            <a href="#"><img src="{% static 'img/banner/b-06.jpg' %}" alt=""></a>
-                            <div class="b-02-tag">
-                                <h3>20% <br> <span>off</span> </h3>
-                            </div>
-                            <div class="banner-text banner-1-text">
-                                <span>Covid 19</span>
-                                <h2>Hand Sanitizer</h2>
-                                <div class="b-button red-b-button">
-                                    <a href="contact.html">shop now <i class="far fa-plus"></i></a>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- banner-area-end -->
-
-    <!-- product-area-start -->
-    <div class="product-area pb-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                    <div class="section-title text-center mb-65">
-                        <h2>Regular Products</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-10 col-lg-10 offset-lg-1 offset-xl-1">
-                    <div class="pro-tab mb-35">
-                        <ul class="nav justify-content-center product-nav" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                                    aria-selected="true">
-                                    <div class="pro-content text-center">
-                                        <div class="pro-tab-icon">
-                                            <i class="flaticon-checkmark"></i>
-                                        </div>
-                                        <h4>Show All</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                                    aria-selected="false">
-                                    <div class="pro-content text-center">
-                                        <div class="pro-tab-icon">
-                                            <i class="flaticon-pill"></i>
-                                        </div>
-                                        <h4>Medicine</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-                                    aria-selected="false">
-                                    <div class="pro-content text-center">
-                                        <div class="pro-tab-icon">
-                                            <i class="flaticon-hand-sanitizer-3"></i>
-                                        </div>
-                                        <h4>Sanitizer</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="contacts-tab" data-toggle="tab" href="#contacts" role="tab" aria-controls="contact"
-                                    aria-selected="false">
-                                    <div class="pro-content text-center">
-                                        <div class="pro-tab-icon">
-                                            <i class="flaticon-temperature"></i>
-                                        </div>
-                                        <h4>Thermometer</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="contact1-tab" data-toggle="tab" href="#contact1" role="tab" aria-controls="contact"
-                                    aria-selected="false">
-                                    <div class="pro-content text-center">
-                                        <div class="pro-tab-icon">
-                                            <i class="flaticon-fashion"></i>
-                                        </div>
-                                        <h4>Accessories</h4>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="product-tab-content">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-08.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>face mask</h5>
-                                        <h4><a href="product-details.html">Lab N98 Face Mask</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-01.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">Hot</span>
-                                    <div class="product-text">
-                                        <h5>sanitizer</h5>
-                                        <h4><a href="product-details.html">Hand Sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-02.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>home accessories</h5>
-                                        <h4><a href="product-details.html">Inhaler Pressure Drop</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-03.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Temperature Gun</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-04.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>hand gloves</h5>
-                                        <h4><a href="product-details.html">Lab Hand Gloves</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-05.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Digital Thermometer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-06.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>hand sanitizer</h5>
-                                        <h4><a href="product-details.html">hand sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-07.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-3">-30%</span>
-                                    <div class="product-text">
-                                        <h5>personal</h5>
-                                        <h4><a href="product-details.html">Health Medicine</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-08.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>face mask</h5>
-                                        <h4><a href="product-details.html">Lab N98 Face Mask</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-01.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">Hot</span>
-                                    <div class="product-text">
-                                        <h5>sanitizer</h5>
-                                        <h4><a href="product-details.html">Hand Sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-03.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>home accessories</h5>
-                                        <h4><a href="product-details.html">Inhaler Pressure Drop</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-02.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Temperature Gun</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-04.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>hand gloves</h5>
-                                        <h4><a href="product-details.html">Lab Hand Gloves</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-05.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Digital Thermometer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-06.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>hand sanitizer</h5>
-                                        <h4><a href="product-details.html">hand sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-07.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-3">-30%</span>
-                                    <div class="product-text">
-                                        <h5>personal</h5>
-                                        <h4><a href="product-details.html">Health Medicine</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-08.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>face mask</h5>
-                                        <h4><a href="product-details.html">Lab N98 Face Mask</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-01.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">Hot</span>
-                                    <div class="product-text">
-                                        <h5>sanitizer</h5>
-                                        <h4><a href="product-details.html">Hand Sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-02.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>home accessories</h5>
-                                        <h4><a href="product-details.html">Inhaler Pressure Drop</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-03.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Temperature Gun</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-05.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>hand gloves</h5>
-                                        <h4><a href="product-details.html">Lab Hand Gloves</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-04.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Digital Thermometer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-06.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>hand sanitizer</h5>
-                                        <h4><a href="product-details.html">hand sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-07.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-3">-30%</span>
-                                    <div class="product-text">
-                                        <h5>personal</h5>
-                                        <h4><a href="product-details.html">Health Medicine</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-08.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>face mask</h5>
-                                        <h4><a href="product-details.html">Lab N98 Face Mask</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-01.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">Hot</span>
-                                    <div class="product-text">
-                                        <h5>sanitizer</h5>
-                                        <h4><a href="product-details.html">Hand Sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-02.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>home accessories</h5>
-                                        <h4><a href="product-details.html">Inhaler Pressure Drop</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-03.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Temperature Gun</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-04.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>hand gloves</h5>
-                                        <h4><a href="product-details.html">Lab Hand Gloves</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-05.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Digital Thermometer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-06.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>hand sanitizer</h5>
-                                        <h4><a href="product-details.html">hand sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-07.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-3">-30%</span>
-                                    <div class="product-text">
-                                        <h5>personal</h5>
-                                        <h4><a href="product-details.html">Health Medicine</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact1-tab">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-08.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>face mask</h5>
-                                        <h4><a href="product-details.html">Lab N98 Face Mask</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-01.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">Hot</span>
-                                    <div class="product-text">
-                                        <h5>sanitizer</h5>
-                                        <h4><a href="product-details.html">Hand Sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-02.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>home accessories</h5>
-                                        <h4><a href="product-details.html">Inhaler Pressure Drop</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-03.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Temperature Gun</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-04.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-2">new</span>
-                                    <div class="product-text">
-                                        <h5>hand gloves</h5>
-                                        <h4><a href="product-details.html">Lab Hand Gloves</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-05.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-1">new</span>
-                                    <div class="product-text">
-                                        <h5>medical meter</h5>
-                                        <h4><a href="product-details.html">Digital Thermometer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-07.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-text">
-                                        <h5>hand sanitizer</h5>
-                                        <h4><a href="product-details.html">hand sanitizer</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="product-02-wrapper pos-rel text-center mb-30">
-                                    <div class="product-02-img pos-rel">
-                                        <a href="product-details.html">
-                                            <img src="{% static 'img/products/p-06.png' %}" alt="">
-                                        </a>
-                                        <div class="product-action">
-                                            <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
-                                            <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                                        </div>
-                                    </div>
-                                    <span class="product-tag hot-3">-30%</span>
-                                    <div class="product-text">
-                                        <h5>personal</h5>
-                                        <h4><a href="product-details.html">Health Medicine</a></h4>
-                                        <span>$250.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- product-area-end -->
-
-    <!-- shop-area-start -->
-    <div class="shop-area grey-2-bg pt-100 pb-65">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                    <div class="section-title text-center mb-65">
-                        <h2>Hot Products</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 cl-lg-4 col-md-6">
-                    <div class="product-wrapper text-center mb-30">
-                        <div class="product-img pos-rel">
-                            <a href="#">
-                                <img src="{% static 'img/products/h-01.jpg' %}" alt="">
-                                <img class="secondary-img" src="{% static 'img/products/h-02.jpg' %}" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
-                                <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-text">
-                            <h5>face mask</h5>
-                            <h4><a href="#">Lab N95 Face Mask</a></h4>
-                            <span>$250.99</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 cl-lg-4 col-md-6">
-                    <div class="product-wrapper text-center mb-30">
-                        <div class="product-img pos-rel">
-                            <a href="#">
-                                <img src="{% static 'img/products/h-02.jpg' %}" alt="">
-                                <img class="secondary-img" src="{% static 'img/products/h-03.jpg' %}" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
-                                <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-text">
-                            <h5>sanitizer</h5>
-                            <h4><a href="#">Orginal Hand Sanitizer</a></h4>
-                            <span>$250.99</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 cl-lg-4 col-md-6">
-                    <div class="product-wrapper text-center mb-30">
-                        <div class="product-img pos-rel">
-                            <a href="#">
-                                <img src="{% static 'img/products/h-03.jpg' %}" alt="">
-                                <img class="secondary-img" src="{% static 'img/products/h-01.jpg' %}" alt="">
-                            </a>
-                            <div class="product-action">
-                                <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
-                                <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
-                                <a class="action-btn" href="#"><i class="far fa-search"></i></a>
-                            </div>
-                        </div>
-                        <div class="product-text">
-                            <h5>hand gloves</h5>
-                            <h4><a href="#">Medical Hand Gloves</a></h4>
-                            <span>$250.99</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- shop-area-end -->
-
-    <!-- testimonial-area-start -->
-    <div class="testimonial-area pos-rel pt-100 pb-70">
-        <div class="shape d-none d-xl-block">
-            <div class="shape-item test-11"><img src="{% static 'img/testimonial/shape-02.png' %}" alt=""></div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <div class="test-02-img mb-30">
-                        <img src="{% static 'img/testimonial/test.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="single-testtimonial mb-30">
-                        <div class="section-title mb-50">
-                            <h2>What Our Client’s Say</h2>
-                            <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                        </div>
-                        <div class="test-03-active">
-                            <div class="tes-o2-inner">
-                                <div class="test-02-text">
-                                    <p>Sed perspiciat unde omnis iste natus error volup tates accusanu oloremque laudantium totaa periam eaqu eypsa
-                                        quae
-                                        ab illo inventore veritatisd</p>
-                                    <span>Laudantiu totaa periam eaqu eypsas quae ab illo inventore veritatisd erspiciatis</span>
-                                    <div class="clientsay-name">
-                                        <div class="client-say-img">
-                                            <img src="{% static 'img/testimonial/04.png' %}" alt="">
-                                        </div>
-                                        <div class="client-say-content">
-                                            <h4>Sebastian Barry</h4>
-                                            <span>Business Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tes-o2-inner">
-                                <div class="test-02-text">
-                                    <p>Sed perspiciat unde omnis iste natus error volup tates accusanu oloremque laudantium totaa periam eaqu eypsa
-                                        quae
-                                        ab illo inventore veritatisd</p>
-                                    <span>Laudantiu totaa periam eaqu eypsas quae ab illo inventore veritatisd erspiciatis</span>
-                                    <div class="clientsay-name">
-                                        <div class="client-say-img">
-                                            <img src="{% static 'img/testimonial/04.png' %}" alt="">
-                                        </div>
-                                        <div class="client-say-content">
-                                            <h4>Sebastian Barry</h4>
-                                            <span>Business Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tes-o2-inner">
-                                <div class="test-02-text">
-                                    <p>Sed perspiciat unde omnis iste natus error volup tates accusanu oloremque laudantium totaa periam eaqu eypsa
-                                        quae
-                                        ab illo inventore veritatisd</p>
-                                    <span>Laudantiu totaa periam eaqu eypsas quae ab illo inventore veritatisd erspiciatis</span>
-                                    <div class="clientsay-name">
-                                        <div class="client-say-img">
-                                            <img src="{% static 'img/testimonial/04.png' %}" alt="">
-                                        </div>
-                                        <div class="client-say-content">
-                                            <h4>Sebastian Barry</h4>
-                                            <span>Business Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="blog-area pt-105 pb-75 blog-2" data-background="{% static 'img/bg/03.jpg' %}">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
-                    <div class="section-title text-center mb-65">
-                        <h2>Latest News & Blog</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-img pos-rel">
-                            <a href="blog-details.html"><img src="{% static 'img/blog/01.jpg' %}" alt=""></a>
-                            <span class="blog-tag color-1">covid -19</span>
-                        </div>
-                        <div class="blog-text">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 Aug 2020</a></span>
-                            </div>
-                            <h4><a href="blog-details.html">Mirage Deep Dive Under anding Timin Response</a></h4>
-                            <p>Sedut perspiciatis unde omnis natus error sit voluptatem accusantium </p>
-                            <div class="b-button gray-b-button">
-                                <a href="blog-details.html">read more <i class="far fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-img pos-rel">
-                            <a href="blog-details.html"><img src="{% static 'img/blog/02.jpg' %}" alt=""></a>
-                            <span class="blog-tag color-2">sanitizer</span>
-                        </div>
-                        <div class="blog-text">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 Aug 2020</a></span>
-                            </div>
-                            <h4><a href="blog-details.html">How To Feel More Energe Even You’re Stuck</a></h4>
-                            <p>Sedut perspiciatis unde omnis natus error sit voluptatem accusantium </p>
-                            <div class="b-button gray-b-button">
-                                <a href="blog-details.html">read more <i class="far fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="blog-wrapper mb-30">
-                        <div class="blog-img pos-rel">
-                            <a href="blog-details.html"><img src="{% static 'img/blog/03.jpg' %}" alt=""></a>
-                            <span class="blog-tag color-1">medical</span>
-                        </div>
-                        <div class="blog-text">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar-alt"></i> <a href="blog-details.html">25 Aug 2020</a></span>
-                            </div>
-                            <h4><a href="blog-details.html">Learning Resourc Challe
-                                    Ging Online Work</a></h4>
-                            <p>Sedut perspiciatis unde omnis natus error sit voluptatem accusantium </p>
-                            <div class="b-button gray-b-button">
-                                <a href="blog-details.html">read more <i class="far fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- blog-area-end -->
-
-    <!-- brand-area-start -->
-    <div class="brand-area pt-100 pb-40">
-        <div class="container">
-            <div class="row mb-30">
-                <div class="col-xl-7 col-lg-7 col-md-8">
-                    <div class="section-title mb-30">
-                        <h2>Features Products</h2>
-                        <p>Sed ut perspiciatis unde omnis iste natus error</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 col-md-4">
-                    <div class="b-button gray-b-button shop-btn s-btn text-md-right mb-30">
-                        <a href="contact.html">view all product <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/01.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/02.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/03.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/04.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/05.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/06.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/07.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/08.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/09.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/10.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/11.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-3 col-6">
-                    <div class="single-brand mb-60">
-                        <img src="{% static 'img/brand/12.png' %}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- brand-area-end -->
-
-    <!-- instagram-area-start -->
-    <div class="instagram-area pl-130 pr-130">
-        <div class="container-fluid">
-            <div class="row instagram-active">
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/01.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/02.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/03.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/04.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/05.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/06.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 p-0">
-                    <div class="instagram-wrapper">
-                        <div class="instagram-img">
-                            <a href="#"><img src="{% static 'img/instagram/01.jpg' %}" alt="">
-                                <div class="instagram-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-    <!-- footer-area-start -->
-    <footer>
-      <div class="footer-area pt-80 pb-45">
-          <div class="container">
-              <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-wrapper mb-30">
-                            <h3 class="footer-title">About Company</h3>
-                            <div class="footer-text">
-                                <p>But must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born </p>
-                            </div>
-                            <div class="footer-icon">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-wrapper ml-80 mb-30">
-                            <h3 class="footer-title">Useful Links</h3>
-                            <div class="footer-link">
-                                <ul>
-                                    <li><a href="about.html">Shipping Options</a></li>
-                                    <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">My Wishlist</a></li>
-                                    <li><a href="about.html">My Account</a></li>
-                                    <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Return Policy</a></li>
-                                    <li><a href="about.html">Shopping FAQs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-wrapper ml-80 mb-30">
-                            <h3 class="footer-title">Product</h3>
-                            <div class="footer-link">
-                                <ul>
-                                    <li><a href="about.html">Thermometer</a></li>
-                                    <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">Vitamins & Supplements</a></li>
-                                    <li><a href="about.html">Temperature Gun</a></li>
-                                    <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Oxygen Mmeter & Mask</a></li>
-                                    <li><a href="about.html">Shipping & Returns</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="footer-wrapper ml-130 mb-30">
-                            <h3 class="footer-title">Payment</h3>
-                            <div class="footer-img">
-                                <img src="{% static 'img/footer/footer.png' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
+  <section class="hero-area">
+      <div class="hero-slider">
+          <div class="slider-active">
+              <div class="single-slider slider-height d-flex align-items-center"
+                  data-background="{% static 'img/slider/01.jpg' %}">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xl-5 col-lg-6">
+                              <div class="hero-text mt-90">
+                                  <div class="hero-slider-caption ">
+                                      <span data-animation="fadeInUp" data-delay=".2s">covid -19 products</span>
+                                      <h2 data-animation="fadeInUp" data-delay=".4s">Face Mask
+                                          Thermometer</h2>
+                                      <p data-animation="fadeInUp" data-delay=".6s">Quis autem vel eum iure reprehenin voluptate
+                                          velit esse quam nihil molestiae conse</p>
+                                  </div>
+                                  <div class="hero-slider-btn">
+                                      <a data-animation="fadeInUp" data-delay=".8s" href="products/"
+                                          class="c-btn">shop now <i class="far fa-plus"></i></a>
+                                          <div class="b-button" data-animation="fadeInUp" data-delay="1s" style="animation-delay: 1s;">
+                                              <a href="contact.html" >hot collection <i class="far fa-plus"></i></a>
+                                           </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-7 col-lg-6">
+                              <div class="slider-img d-none d-lg-block" data-animation="fadeInRight" data-delay=".8s">
+                                  <img src="{% static 'img/slider/01.png' %}" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
       </div>
-    <div class="footer-bottom-area pt-25 pb-25">
+  </section>
+  <div class="banner-area banner-pb pt-30 pb-70 pl-55 pr-55">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4">
+                  <div class="banner-wrapper mb-30">
+                      <div class="banner-img pos-rel">
+                          <a href="product-details/"><img src="{% static 'img/banner/01.jpg' %}" alt=""></a>
+                          <div class="banner-text">
+                              <span>Digital Meter</span>
+                              <h2>Thermometer</h2>
+                              <div class="b-button red-b-button">
+                                  <a href="products/">shop now <i class="far fa-plus"></i></a>
+                               </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                  <div class="banner-wrapper mb-30">
+                      <div class="banner-img pos-rel">
+                          <a href="product-details/"><img src="{% static 'img/banner/02.jpg' %}" alt=""></a>
+                          <div class="banner-text">
+                              <span>Gun Covid -19</span>
+                              <h2>Temperature</h2>
+                              <div class="b-button red-b-button">
+                                  <a href="products/">shop now <i class="far fa-plus"></i></a>
+                               </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                  <div class="banner-wrapper mb-30">
+                      <div class="banner-img pos-rel">
+                          <a href="product-details/"><img src="{% static 'img/banner/03.jpg' %}" alt=""></a>
+                          <div class="banner-text">
+                              <span>Pulse</span>
+                              <h2>Oximeter</h2>
+                              <div class="b-button red-b-button">
+                                  <a href="products/">shop now <i class="far fa-plus"></i></a>
+                               </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                  <div class="banner-wrapper mb-30">
+                      <div class="banner-img pos-rel">
+                          <a href="product-details/"><img src="{% static 'img/banner/04.jpg' %}" alt=""></a>
+                          <div class="banner-text">
+                              <span>Lab Surgery</span>
+                              <h2>N95 Face Mask</h2>
+                              <div class="b-button red-b-button">
+                                  <a href="products/">shop now <i class="far fa-plus"></i></a>
+                               </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                  <div class="banner-wrapper mb-30">
+                      <div class="banner-img pos-rel">
+                          <a href="product-details/"><img src="{% static 'img/banner/05.jpg' %}" alt=""></a>
+                          <div class="banner-text">
+                              <span>Surgery Lab</span>
+                              <h2>Hand Gloves</h2>
+                              <div class="b-button red-b-button">
+                                  <a href="products/">shop now <i class="far fa-plus"></i></a>
+                               </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="product-area pb-50">
+      <div class="container">
+          <div class="tab-border mb-60">
+              <div class="row">
+                  <div class="col-xl-7 col-lg-6">
+                      <div class="section-title mb-25">
+                          <h2>Featured Products</h2>
+                          <p>The featured products that are most bought by users in the pharmacy. </p>
+                      </div>
+                  </div>
+                  <div class="col-xl-5 col-lg-6">
+                      <div class="product-tab mb-25">
+                          <ul class="nav justify-content-start justify-content-lg-end product-nav" id="myTab" role="tablist">
+                              <li class="nav-item">
+                                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                      <i class="far fa-shield-check"></i> Best Seller
+                                  </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                  <i class="far fa-star"></i>  Top Rated
+                                  </a>
+                              </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                                  <i class="far fa-star"></i> Popular
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="product-tab-content">
+              <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row">
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/01.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/01.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Medical Microscope</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/02.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/02.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand sanitizer</h5>
+                                      <h4><a href="product-details/">Hand Sanitizer Covid -19</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/03.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/03.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>home accessories</h5>
+                                      <h4><a href="product-details/">Medical Thermometer</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/04.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/04.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Lab N95 Face Mask</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/05.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/05.jpg' %}' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand gloves</h5>
+                                      <h4><a href="product-details/">Covid -19 Hand Gloves</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/06.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/06.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>medical equipment</h5>
+                                      <h4><a href="product-details/">New Temperature Gun</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="row">
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/01.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/01.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Medical Microscope</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/03.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/03.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>home accessories</h5>
+                                      <h4><a href="product-details/">Medical Thermometer</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/02.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/02.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand sanitizer</h5>
+                                      <h4><a href="product-details/">Hand Sanitizer Covid -19</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/04.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/04.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Lab N95 Face Mask</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/05.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/05.jpg' %}' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand gloves</h5>
+                                      <h4><a href="product-details/">Covid -19 Hand Gloves</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/06.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/06.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>medical equipment</h5>
+                                      <h4><a href="product-details/">New Temperature Gun</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                      <div class="row">
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/01.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/01.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Medical Microscope</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/02.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/02.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand sanitizer</h5>
+                                      <h4><a href="product-details/">Hand Sanitizer Covid -19</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/03.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/03.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>home accessories</h5>
+                                      <h4><a href="product-details/">Medical Thermometer</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/04.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/04.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>accessories</h5>
+                                      <h4><a href="product-details/">Lab N95 Face Mask</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/06.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/06.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>medical equipment</h5>
+                                      <h4><a href="product-details/">New Temperature Gun</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-xl-4 cl-lg-4 col-md-6">
+                              <div class="product-wrapper text-center mb-45">
+                                  <div class="product-img pos-rel">
+                                      <a href="product-details/">
+                                          <img src="{% static 'img/products/05.jpg' %}" alt="">
+                                          <img class="secondary-img" src="{% static 'img/products/05.jpg' %}" alt="">
+                                      </a>
+                                      <div class="product-action">
+                                          <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                                          <a class="c-btn" href="#">add to cart <i class="far fa-plus"></i></a>
+                                          <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                                      </div>
+                                  </div>
+                                  <div class="product-text">
+                                      <h5>hand gloves</h5>
+                                      <h4><a href="product-details/">Covid -19 Hand Gloves</a></h4>
+                                      <span>$250.99</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+  <div class="banner-02-area pb-70 pl-165 pr-165">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="banner-02-wrapper text-center mb-30" data-bg-color="#edf7fb">
+                      <div class="banner-02-text">
+                          <span>Digital Meter</span>
+                          <h2>Blood Pressure Meter</h2>
+                      </div>
+                      <div class="banner-02-img pos-rel">
+                          <a href="#"><img src="{% static 'img/banner/b-01.png' %}" alt=""></a>
+                           <span class="banner-tag">hot</span>
+                      </div>
+                      <div class="banner-price">
+                          <span class="old-price">$250.99</span>
+                          <span class="new-price">$239.99</span>
+                      </div>
+                      <div class="banner-button">
+                          <a class="c-btn" href="#">buy now <i class="far fa-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="banner-02-wrapper text-center mb-30" data-bg-color="#f8f8f8">
+                      <div class="banner-02-text">
+                          <span>Digital Meter</span>
+                          <h2>Blood Pressure Meter</h2>
+                      </div>
+                      <div class="banner-02-img pos-rel">
+                          <a href="#"><img src="{% static 'img/banner/b-02.png' %}" alt=""></a>
+                           <span class="banner-tag">hot</span>
+                      </div>
+                      <div class="banner-price">
+                          <span class="old-price">$250.99</span>
+                          <span class="new-price">$239.99</span>
+                      </div>
+                      <div class="banner-button">
+                          <a class="c-btn" href="#">buy now <i class="far fa-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="banner-02-wrapper text-center mb-30" data-bg-color="#f3f8ff">
+                      <div class="banner-02-text">
+                          <span>Digital Meter</span>
+                          <h2>Blood Pressure Meter</h2>
+                      </div>
+                      <div class="banner-02-img pos-rel">
+                          <a href="#"><img src="{% static 'img/banner/b-03.png' %}" alt=""></a>
+                           <span class="banner-tag">hot</span>
+                      </div>
+                      <div class="banner-price">
+                          <span class="old-price">$250.99</span>
+                          <span class="new-price">$239.99</span>
+                      </div>
+                      <div class="banner-button">
+                          <a class="c-btn" href="#">buy now <i class="far fa-plus"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="product-area pb-70">
+      <div class="container">
+          <div class="row mb-30">
+              <div class="col-xl-7 col-lg-7 col-md-7">
+                  <div class="section-title mb-30">
+                      <h2>Features Products</h2>
+                      <p>Sed ut perspiciatis unde omnis iste natus error</p>
+                  </div>
+              </div>
+              <div class="col-xl-5 col-lg-5 col-md-5">
+                  <div class="b-button shop-btn s-btn text-md-right mb-30">
+                      <a href="contact.html">view all product <i class="fal fa-long-arrow-right"></i></a>
+                   </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-08.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <div class="product-text">
+                          <h5>face mask</h5>
+                          <h4><a href="product-details/">Lab N98 Face Mask</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-01.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <span class="product-tag hot-1">Hot</span>
+                      <div class="product-text">
+                          <h5>sanitizer</h5>
+                          <h4><a href="product-details/">Hand Sanitizer</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-02.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <div class="product-text">
+                          <h5>home accessories</h5>
+                          <h4><a href="product-details/">Inhaler Pressure Drop</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-03.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <span class="product-tag hot-2">new</span>
+                      <div class="product-text">
+                          <h5>medical meter</h5>
+                          <h4><a href="product-details/">Temperature Gun</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-04.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <span class="product-tag hot-2">new</span>
+                      <div class="product-text">
+                          <h5>hand gloves</h5>
+                          <h4><a href="product-details/">Lab Hand Gloves</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-05.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <span class="product-tag hot-1">new</span>
+                      <div class="product-text">
+                          <h5>medical meter</h5>
+                          <h4><a href="product-details/">Digital Thermometer</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-06.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <div class="product-text">
+                          <h5>hand sanitizer</h5>
+                          <h4><a href="product-details/">hand sanitizer</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-3 col-lg-4 col-md-6">
+                  <div class="product-02-wrapper pos-rel text-center mb-30">
+                      <div class="product-02-img pos-rel">
+                          <a href="product-details/">
+                              <img src="{% static 'img/products/p-07.png' %}" alt="">
+                          </a>
+                          <div class="product-action">
+                              <a class="action-btn" href="#"><i class="far fa-heart"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-cart-plus"></i></a>
+                              <a class="action-btn" href="#"><i class="far fa-search"></i></a>
+                          </div>
+                      </div>
+                      <span class="product-tag hot-3">-30%</span>
+                      <div class="product-text">
+                          <h5>personal</h5>
+                          <h4><a href="product-details/">Health Medicine</a></h4>
+                          <span>$250.99</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="features-area pt-60 pb-30 grey-2-bg">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="features-wrapper mb-30">
+                      <div class="features-icon fe-1 f-left">
+                          <i class="fal fa-ship"></i>
+                      </div>
+                      <div class="features-text">
+                          <h3>Free Shipping</h3>
+                          <p>Sed perspicia unde omnis iste
+                          nat error voluptate accus</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="features-wrapper mb-30">
+                      <div class="features-icon fe-2 f-left">
+                           <i class="fal fa-usd-circle"></i>
+                      </div>
+                      <div class="features-text">
+                          <h3>Money Back</h3>
+                          <p>Sed perspicia unde omnis iste
+                          nat error voluptate accus</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                  <div class="features-wrapper mb-30">
+                      <div class="features-icon fe-3 f-left">
+                          <i class="fal fa-unlock-alt"></i>
+                      </div>
+                      <div class="features-text">
+                          <h3>100% Secure</h3>
+                          <p>Sed perspicia unde omnis iste
+                          nat error voluptate accus</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+<footer>
+    <div class="footer-area pt-80 pb-45">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="copyright">
-                        <p>Copyright <i class="far fa-copyright"></i> 2020 <a href="#">Medibazar</a>. All Rights Reserved</p>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6">
-                    <div class="footer-bottom-link f-right">
-                        <ul>
-                            <li><a href="#">Home </a></li>
-                            <li><a href="#"> About Us</a></li>
-                            <li><a href="#">Our Product</a></li>
-                            <li><a href="#">Service </a></li>
-                        </ul>
-                    </div>
-                </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper mb-30">
+                          <h3 class="footer-title">About Company</h3>
+                          <div class="footer-text">
+                              <p>But must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born </p>
+                          </div>
+                          <div class="footer-icon">
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                              <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-80 mb-30">
+                          <h3 class="footer-title">Useful Links</h3>
+                          <div class="footer-link">
+                              <ul>
+                                  <li><a href="about.html">Shipping Options</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">My Wishlist</a></li>
+                                  <li><a href="about.html">My Account</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Return Policy</a></li>
+                                  <li><a href="about.html">Shopping FAQs</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-80 mb-30">
+                          <h3 class="footer-title">Product</h3>
+                          <div class="footer-link">
+                              <ul>
+                                  <li><a href="about.html">Thermometer</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">Vitamins & Supplements</a></li>
+                                  <li><a href="about.html">Temperature Gun</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Oxygen Mmeter & Mask</a></li>
+                                  <li><a href="about.html">Shipping & Returns</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-130 mb-30">
+                          <h3 class="footer-title">Payment</h3>
+                          <div class="footer-img">
+                              <img src="{% static 'img/footer/footer.png' %}" alt="">
+                          </div>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
-    </footer>
+  <div class="footer-bottom-area mr-70 ml-70 pt-25 pb-25">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="copyright">
+                      <p>Copyright <i class="far fa-copyright"></i> 2020 <a href="#">Medibazar</a>. All Rights Reserved</p>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="footer-bottom-link f-right">
+                      <ul>
+                          <li><a href="#">Home </a></li>
+                          <li><a href="#"> About Us</a></li>
+                          <li><a href="#">Our Product</a></li>
+                          <li><a href="#">Service </a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
 {% endblock %}

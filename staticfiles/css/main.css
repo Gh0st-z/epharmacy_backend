@@ -9611,6 +9611,10 @@ body {
   transition: all 0.3s ease-out 0s;
 }
 
+.logo-image{
+  max-width: 60%;
+}
+
 .f-left {
   float: left;
 }
@@ -18116,6 +18120,63 @@ ul.cat li a:hover {
   height: 700px;
   width: 100%;
   border: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* So padding doesn't affect the width */
+}
+
+.form-group input[type="submit"] {
+  cursor: pointer;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #4cae4c;
+}
+
+/* If you want to have a responsive form, you can add media queries like this: */
+@media (max-width: 768px) {
+  .container {
+    width: auto;
+    padding: 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,12 @@ class CreatePharmacyProfileAPI(APIView):
             'website_url': request.data.get('website_url'),
         }
         admin_id = request.data.get('admin_id')
-        data['admin_id'] = admin_id
+        admin = User.objects.get(id=admin_id)
+        if admin.role == "admin":
+            data['admin_id'] = admin_id
+        else:
+            return Response("Not an admin account!", status=status.HTTP_401_UNAUTHORIZED)
+
         pharmacy_logo = request.FILES.get('pharmacy_logo')
 
         if pharmacy_logo:
@@ -39,3 +44,13 @@ class GetPharmacyProfileAPI(APIView):
             return JsonResponse({'exists': True})
         else:
             return JsonResponse({'exists': False})
+
+
+class GetAllPharmacyAPI(APIView):
+    def get(self, request, *args, **kwargs):
+        pharmacy = Pharmacy.objects.all()
+        if pharmacy.exists():
+            serializer = PharmacySerializer(pharmacy, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)

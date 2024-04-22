@@ -1,0 +1,451 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Product Detail{% endblock %}
+{% block content %}
+<header>
+  <div class="header-top-area pl-165 pr-165">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xl-8 col-lg-6 col-md-6">
+                  <div class="header-top-wrapper">
+                      <div class="header-top-info d-none d-xl-block f-left">
+                          <span><i class="fas fa-heart"></i> Welcome to OnlineMedsHub. We provides medical accessories</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="header-top-right text-md-right">
+                      <div class="shop-menu">
+                          <ul>
+                              <li><a href="register.html"><i class="fal fa-user-circle"></i> My Account</a></li>
+                              <li><a href="cart.html"><i class="far fa-cart-plus"></i> Cart</a></li>
+                              <li><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="sticky-header" class="main-menu-area menu-01 pl-165 pr-165">
+      <div class="container-fluid">
+          <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-3">
+                <div class="logo">
+                    <a href="../home/"><img class="logo-image " src="{% static 'img/logo/company_logo.png' %}" alt="" /></a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 d-none d-lg-block">
+                  <div class="header-right f-right">
+                      <div class="header-lang f-right pos-rel d-none d-md-none d-lg-block">
+                          <div class="lang-icon">
+                              <img src="{% static 'img/icon/flag.png' %}" alt="">
+                              <a href="#"><i class="far fa-angle-down"></i></a>
+                          </div>
+                          <ul class="header-lang-list">
+                              <li><a href="#">USA</a></li>
+                              <li><a href="#">UK</a></li>
+                              <li><a href="#">CA</a></li>
+                              <li><a href="#">AU</a></li>
+                          </ul>
+                      </div>
+                      <div class="menu-bar info-bar f-right d-none d-md-none d-lg-block">
+                          <a href="#"><i class="fal fa-bars"></i></a>
+                      </div>
+                      <div class="header-search f-right d-none d-xl-block">
+                          <form class="header-search-form">
+                              <input placeholder="Search" type="text">
+                              <button type="submit"><i class="far fa-search"></i></button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="main-menu">
+                    <nav id="mobile-menu">
+                        <ul>
+                            <li class="active"><a href="../home/">Home</a>
+                            </li>
+                            <li><a href="products/">Shop</a>
+                            </li>
+                            <li><a href="shop-grid.html">BMI</a></li>
+                            <li><a href="blog-grid.html">Family Profile</a>
+                            </li>
+                            <li><a href="#">Set Reminder</a>
+                            </li>
+                            <li><a href="contact.html">Diet Plans</a></li>
+                        </ul>
+                    </nav>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="mobile-menu"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="extra-info">
+      <div class="close-icon">
+          <button>
+              <i class="far fa-window-close"></i>
+          </button>
+      </div>
+      <div class="logo-side mb-30">
+          <a href="index-2.html">
+              <img src="{% static 'img/logo/white-logo.png' %}" alt="" />
+          </a>
+      </div>
+      <div class="side-info mb-30">
+          <div class="contact-list mb-30">
+              <h4>Office Address</h4>
+              <p>123/A, Miranda City Likaoli
+                  Prikano, Dope</p>
+          </div>
+          <div class="contact-list mb-30">
+              <h4>Phone Number</h4>
+              <p>+0989 7876 9865 9</p>
+              <p>+(090) 8765 86543 85</p>
+          </div>
+          <div class="contact-list mb-30">
+              <h4>Email Address</h4>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="31585f575e715449505c415d541f525e5c">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c69746d617c606922616d65604c647961226f6361">[email&#160;protected]</a></p>
+          </div>
+      </div>
+      <div class="instagram">
+          <a href="#">
+              <img src="{% static 'img/portfolio/p1.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p2.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p3.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p4.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p5.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p6.jpg' %}" alt="">
+          </a>
+      </div>
+      <div class="social-icon-right mt-20">
+          <a href="#">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-google-plus-g"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-instagram"></i>
+          </a>
+      </div>
+  </div>
+</header>
+<main>
+  <div class="breadcrumb-area pt-125 pb-125" style="background-image:url({% static 'img/bg/04.jpg' %})">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-12">
+                  <div class="breadcrumb-wrapper">
+                      <div class="breadcrumb-text">
+                          <h2>product details</h2>
+                      </div>
+                      <ul class="breadcrumb-menu">
+                          <li><a href="index-2.html">home</a></li>
+                          <li><span>product details</span></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <section class="shop-banner-area pt-100 pb-70">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6">
+                  <div class="shop-thumb-tab">
+                      <ul class="nav" id="myTab2" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                  aria-selected="true"><img src="{% static 'img/products/pr-11.png' %}" alt=""> </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                  aria-selected="false"><img src="{% static 'img/products/pr-22.png' %}" alt=""></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="profile-tab2" data-toggle="tab" href="#profile1" role="tab"
+                                  aria-selected="false"><img src="{% static 'img/products/pr-33.png' %}" alt=""></a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="product-details-img mb-30">
+                      <div class="tab-content" id="myTabContent2">
+                          <div class="tab-pane fade show active" id="home" role="tabpanel">
+                              <div class="product-large-img">
+                                  <img src="{% static 'img/products/pr-11.png' %}" alt="">
+                              </div>
+                          </div>
+                          <div class="tab-pane fade" id="profile" role="tabpanel">
+                              <div class="product-large-img">
+                                  <img src="{% static 'img/products/pr-22.png' %}" alt="">
+                              </div>
+                          </div>
+                          <div class="tab-pane fade" id="profile1" role="tabpanel">
+                              <div class="product-large-img">
+                                  <img src="{% static 'img/products/pr-33.png' %}" alt="">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                  <div class="product-details-wrapper mb-30">
+                      <div class="product-text">
+                          <h5>face mask</h5>
+                          <h4>Lab N98 Face Mask</h4>
+                          <div class="pro-rating">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fad fa-star-half-alt"></i>
+                              <span>(05 Reviews)</span>
+                          </div>
+                          <span>$250.99</span>
+                      </div>
+                      <div class="product-variant">
+                          <div class="product-desc">
+                              <p>On the other hand, we denounce with righteous indigna <br>
+                              tion and dislike men who are so beguiled and demor</p>
+                          </div>
+                          <div class="product-info-list">
+                              <span>Size</span>
+                              <a href="#">l</a>
+                              <a href="#">m</a>
+                              <a href="#">s</a>
+                              <a href="#">x1</a>
+                          </div>
+                          <div class="product2-info-list">
+                              <span>color</span>
+                              <a class="p--1" href="#"></a>
+                              <a class="p--2" href="#"></a>
+                              <a class="p--3" href="#"></a>
+                              <a class="p--4" href="#"></a>
+                          </div>
+                          <span class="stock">50 In Stock</span>
+                          <div class="product-action-details ">
+                              <div class="product-details-action">
+                                  <form action="#">
+                                      <div class="plus-minus">
+                                          <div class="cart-plus-minus">
+                                              <input type="text" value="1">
+                                              <div class="dec qtybutton">-</div>
+                                              <div class="inc qtybutton">+</div>
+                                          </div>
+                                      </div>
+                                      <div class="details-cart-btn">
+                                          <button class="c-btn red-btn">add to cart <i class="far fa-plus"></i></button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <div class="pro-details-icon">
+                              <a href="#"><i class="far fa-heart"></i></a>
+                              <a href="#"><i class="far fa-search"></i></a>
+                              <a href="#"><i class="far fa-exchange"></i></a>
+                          </div>
+                          <div class="product-02-list">
+                              <ul>
+                                  <li>
+                                      <div class="pro-02-list-info f-left">
+                                          <span>Categories :</span>
+                                      </div>
+                                      <div class="pro-02-list-text">
+                                          <span>Mask, Covid -19, Sanitizer, Facemask</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="pro-02-list-info f-left">
+                                          <span>SKU :</span>
+                                      </div>
+                                      <div class="pro-02-list-text">
+                                          <span>012345</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="pro-02-list-info f-left">
+                                          <span class="pro11">Share Now :</span>
+                                      </div>
+                                      <div class="pro-02-list-icon">
+                                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                          <a href="#"><i class="fab fa-twitter"></i></a>
+                                          <a href="#"><i class="fab fa-instagram"></i></a>
+                                          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="product-desc-area pb-60">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-8 col-lg-8 mb-30">
+                  <div class="bakix-details-tab">
+                      <ul class="nav text-center pb-30 mb-50" id="myTab" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" id="desc-tab" data-toggle="tab" href="#id-desc" role="tab"
+                                  aria-controls="home" aria-selected="true">Description </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" id="id-add-in" data-toggle="tab" href="#id-add" role="tab"
+                                  aria-controls="profile" aria-selected="false">Additional Information</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="id-desc" role="tabpanel" aria-labelledby="desc-tab">
+                          <div class="row">
+                              <div class="col-md-12">
+                                  <div class="event-text">
+                                      <p>Sed perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque
+                                      ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                                      quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni doloreos qui ratione voluptatem sequi
+                                      nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor siconsectetur, adipisci velit, sed quia non numquam
+                                      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                                      exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                                      reprehenderit qui in ea voltate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                                      voluptas nulla pariatu</p>
+                                      <p>nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor siconsectetur, adipisci velit, sed quia non numquam
+                                      eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                                      exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                                      reprehenderit qui in ea voltate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                                      voluptas nulla pariatu</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="tab-pane fade" id="id-add" role="tabpanel" aria-labelledby="id-add-in">
+                          <div class="additional-info">
+                              <div class="table-responsive">
+                                  <h4>Additional information</h4>
+                                  <table class="table">
+                                      <tbody>
+                                          <tr>
+                                              <th>Weight</th>
+                                              <td class="product_weight">1.4 oz</td>
+                                          </tr>
+                                          <tr>
+                                              <th>Dimensions</th>
+                                              <td class="product_dimensions">62 × 56 × 12 in</td>
+                                          </tr>
+                                          <tr>
+                                              <th>Size</th>
+                                              <td class="product_dimensions">XL, XXL, LG, SM, MD</td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4">
+                  <div class="product-desc-imgmb-30">
+                      <img src="{% static 'img/products/pr-banner.png' %}' %}" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+</main>
+<footer>
+    <div class="footer-area pt-80 pb-45">
+        <div class="container">
+            <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper mb-30">
+                          <h3 class="footer-title">About Company</h3>
+                          <div class="footer-text">
+                              <p>But must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born </p>
+                          </div>
+                          <div class="footer-icon">
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-instagram"></i></a>
+                              <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-80 mb-30">
+                          <h3 class="footer-title">Useful Links</h3>
+                          <div class="footer-link">
+                              <ul>
+                                  <li><a href="about.html">Shipping Options</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">My Wishlist</a></li>
+                                  <li><a href="about.html">My Account</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Return Policy</a></li>
+                                  <li><a href="about.html">Shopping FAQs</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-80 mb-30">
+                          <h3 class="footer-title">Product</h3>
+                          <div class="footer-link">
+                              <ul>
+                                  <li><a href="about.html">Thermometer</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/our-history.html/">Vitamins & Supplements</a></li>
+                                  <li><a href="about.html">Temperature Gun</a></li>
+                                  <li><a href="https://devsnews.com/template/medibazar/medibazar/team.html/">Oxygen Mmeter & Mask</a></li>
+                                  <li><a href="about.html">Shipping & Returns</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6">
+                      <div class="footer-wrapper ml-130 mb-30">
+                          <h3 class="footer-title">Payment</h3>
+                          <div class="footer-img">
+                              <img src="{% static 'img/footer/footer.png' %}" alt="">
+                          </div>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+  <div class="footer-bottom-area mr-70 ml-70 pt-25 pb-25">
+      <div class="container">
+          <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="copyright">
+                      <p>Copyright <i class="far fa-copyright"></i> 2020 <a href="#">Medibazar</a>. All Rights Reserved</p>
+                  </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6">
+                  <div class="footer-bottom-link f-right">
+                      <ul>
+                          <li><a href="#">Home </a></li>
+                          <li><a href="#"> About Us</a></li>
+                          <li><a href="#">Our Product</a></li>
+                          <li><a href="#">Service </a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+{% endblock %}

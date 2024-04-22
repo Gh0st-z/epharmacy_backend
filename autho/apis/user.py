@@ -30,6 +30,16 @@ class GetUserUpdateDetailAPI(APIView):
             return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
 
 
+class GetAllUserDetailAPI(APIView):
+    def get(self, request, *args, **kwargs):
+        user = User.objects.all()
+        if user.exists():
+            serializer = UserSerializer(user, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        else:
+            return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
+
+
 class LoginUserAPI(APIView):
     def post(self, request, *args, **kwargs):
         data = {

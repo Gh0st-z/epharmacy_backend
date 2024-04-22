@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}BMI{% endblock %}
+{% block content %}
+<header>
+  <div class="header-top-area pl-165 pr-165">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-xl-8 col-lg-6 col-md-6">
+                  <div class="header-top-wrapper">
+                      <div class="header-top-info d-none d-xl-block f-left">
+                          <span><i class="fas fa-heart"></i> Welcome to OnlineMedsHub. We provides medical accessories</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="header-top-right text-md-right">
+                     <div class="shop-menu">
+                         <ul>
+                             <li><a href="register.html"><i class="fal fa-user-circle"></i> My Account</a></li>
+                             <li><a href="cart/"><i class="far fa-cart-plus"></i> Cart</a></li>
+                             <li><a href="wishlist.html"><i class="far fa-heart"></i> Wishlist</a></li>
+                         </ul>
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id="sticky-header" class="main-menu-area menu-01 pl-165 pr-165">
+      <div class="container-fluid">
+          <div class="row align-items-center">
+              <div class="col-xl-3 col-lg-3">
+                <div class="logo">
+                    <a href="../home/"><img class="logo-image " src="{% static 'img/logo/company_logo.png' %}" alt="" /></a>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 d-none d-lg-block">
+                  <div class="header-right f-right">
+                      <div class="header-lang f-right pos-rel d-none d-md-none d-lg-block">
+                          <div class="lang-icon">
+                              <img src="{% static 'img/icon/flag.png" alt="">
+                              <a href="#"><i class="far fa-angle-down"></i></a>
+                          </div>
+                          <ul class="header-lang-list">
+                              <li><a href="#">USA</a></li>
+                              <li><a href="#">UK</a></li>
+                              <li><a href="#">CA</a></li>
+                              <li><a href="#">AU</a></li>
+                          </ul>
+                      </div>
+                      <div class="menu-bar info-bar f-right d-none d-md-none d-lg-block">
+                          <a href="#"><i class="fal fa-bars"></i></a>
+                      </div>
+                      <div class="header-search f-right d-none d-xl-block">
+                          <form class="header-search-form">
+                              <input placeholder="Search" type="text">
+                              <button type="submit"><i class="far fa-search"></i></button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="main-menu">
+                    <nav id="mobile-menu">
+                        <ul>
+                            <li class="active"><a href="../home/">Home</a>
+                            </li>
+                            <li><a href="products/">Shop</a>
+                            </li>
+                            <li><a href="bmi/">BMI</a></li>
+                            <li><a href="family-profile/">Family Profile</a>
+                            </li>
+                            <li><a href="reminder/">Set Reminder</a>
+                            </li>
+                            <li><a href="diet-plans/">Diet Plans</a></li>
+                        </ul>
+                    </nav>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="mobile-menu"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="extra-info">
+      <div class="close-icon">
+          <button>
+              <i class="far fa-window-close"></i>
+          </button>
+      </div>
+      <div class="logo-side mb-30">
+          <a href="index-2.html">
+              <img src="{% static 'img/logo/white-logo.png" alt="" />
+          </a>
+      </div>
+      <div class="side-info mb-30">
+          <div class="contact-list mb-30">
+              <h4>Office Address</h4>
+              <p>123/A, Miranda City Likaoli
+                  Prikano, Dope</p>
+          </div>
+          <div class="contact-list mb-30">
+              <h4>Phone Number</h4>
+              <p>+0989 7876 9865 9</p>
+              <p>+(090) 8765 86543 85</p>
+          </div>
+          <div class="contact-list mb-30">
+              <h4>Email Address</h4>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0a9aea6af80a5b8a1adb0aca5eea3afad">[email&#160;protected]</a></p>
+              <p><a href="https://www.devsnews.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="acc9d4cdc1dcc0c982c1cdc5c0ecc4d9c182cfc3c1">[email&#160;protected]</a></p>
+          </div>
+      </div>
+      <div class="instagram">
+          <a href="#">
+              <img src="{% static 'img/portfolio/p1.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p2.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p3.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p4.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p5.jpg' %}" alt="">
+          </a>
+          <a href="#">
+              <img src="{% static 'img/portfolio/p6.jpg' %}" alt="">
+          </a>
+      </div>
+      <div class="social-icon-right mt-20">
+          <a href="#">
+              <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-google-plus-g"></i>
+          </a>
+          <a href="#">
+              <i class="fab fa-instagram"></i>
+          </a>
+      </div>
+  </div>
+</header>
+<div class="container">
+    <h1>Update Profile</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="middle_name">Middle Name (optional):</label>
+            <input type="text" id="middle_name" name="middle_name" value="{{ user.middle_name }}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" value="{{ user.email }}" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" value="{{ user.phone_number }}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" value="{{ user.address }}" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Update Profile</button>
+    </form>
+</div>
+{% endblock %}
