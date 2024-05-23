@@ -5,6 +5,10 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from autho.models.user import User
 from pharmacy.models.pharmacy import Pharmacy
 from autho.serializers.serializers import UserSerializer
@@ -40,6 +44,7 @@ class GetAllUserDetailAPI(APIView):
             return Response({'message': 'No data found!'}, status=status.HTTP_404_NOT_FOUND)
 
 
+@method_decorator(csrf_exempt, name='dispatch')
 class LoginUserAPI(APIView):
     def post(self, request, *args, **kwargs):
         data = {
@@ -57,7 +62,11 @@ class LoginUserAPI(APIView):
             user = authenticate(request, **data)
             if user is not None:
                 login(request, user)
-                return Response(user_data, status=status.HTTP_200_OK)
+                refresh = RefreshToken.for_user(user)
+                return Response(
+                    {'refresh': str(refresh), 'access': str(refresh.access_token), **user_data},
+                    status=status.HTTP_200_OK
+                )
 
         if check_password(data['password'], user_login.password) and user_login.role == "admin":
             user = authenticate(request, **data)
@@ -68,10 +77,17 @@ class LoginUserAPI(APIView):
                         login(request, user)
                         user_data['pharmacy_exists'] = 'True'
                         user_data['pharmacy_id'] = pharmacy.pharmacy_id
-                        return Response(user_data, status=status.HTTP_200_OK)
+                        refresh = RefreshToken.for_user(user)
+                        return Response(
+                            {'refresh': str(refresh), 'access': str(refresh.access_token), **user_data},
+                            status=status.HTTP_200_OK
+                        )
                 except Pharmacy.DoesNotExist:
                     login(request, user)
                     user_data['pharmacy_exists'] = 'False'
-                    return Response(user_data, status=status.HTTP_200_OK)
+                    return Response(
+                        {'refresh': str(refresh), 'access': str(refresh.access_token), **user_data},
+                        status=status.HTTP_200_OK
+                    )
 
         return Response({'Error': 'Login not succeeded!'}, status=status.HTTP_401_UNAUTHORIZED)

@@ -12,26 +12,30 @@ from invoice.serializers.serializers import InvoiceSerializer
 class GenerateInvoiceAPI(APIView):
     def post(self, request, *args, **kwargs):
         data = dict()
-        customer = request.GET.get('customer_id')
-        order = request.GET.get('order_id')
-        user = User.objects.get(id=customer)
-        customer_order = Order.objects.get(order_id=order)
+        try:
+            customer = request.GET.get('customer_id')
+            order = request.GET.get('order_id')
+            user = User.objects.get(id=customer)
+            customer_order = Order.objects.get(order_id=order)
 
-        if user.middle_name == " ":
-            data['customer_name'] = user.first_name + " " + user.last_name
-        else:
-            data['customer_name'] = user.first_name + " " + user.middle_name + " " + user.last_name
+            if user.middle_name == " ":
+                data['customer_name'] = user.first_name + " " + user.last_name
+            else:
+                data['customer_name'] = user.first_name + " " + user.middle_name + " " + user.last_name
 
-        data['quantity'] = customer_order.quantity
-        data['total_price'] = customer_order.total_price
-        data['billing_address'] = customer_order.billing_address
-        data['customer'] = customer
-        data['order'] = order
+            data['quantity'] = customer_order.quantity
+            data['total_price'] = customer_order.total_price
+            data['billing_address'] = customer_order.billing_address
+            data['customer'] = customer
+            data['order'] = order
 
-        serializer = InvoiceSerializer(data=data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+            serializer = InvoiceSerializer(data=data)
+            serializer.is_valid(raise_exception=True)
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+        except Exception as e:
+            return Response("Please Enter Valid Detail!", status=status.HTTP_400_BAD_REQUEST)
 
 
 class GetInvoiceAPI(APIView):
